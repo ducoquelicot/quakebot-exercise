@@ -1,6 +1,6 @@
 import json
 import random
-
+import os
 from jinja2 import Template
 
 
@@ -24,6 +24,7 @@ def main():
         #TODO: Experiment with different hard-coded values
         # to ensure your template logic works for all scenarios!
         'num_large_quakes_yesterday': random.randint(5,10),
+        # 'num_large_quakes_yesterday' : 7,
         'large_quakes': large_quakes[0:5],
         'large_quakes_count': len(large_quakes),
         'num_quakes': len(data),
@@ -45,7 +46,7 @@ def sort_quakes(earthquakes):
     )
 
 def usgs_data():
-    with open('usgs_all_day.geojson') as f:
+    with open(os.path.expanduser('~/Desktop/quakebot/quakebot-exercise/usgs_all_day.geojson')) as f:
         return json.load(f)['features']
 
 def write_story(text):
