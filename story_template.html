@@ -16,10 +16,10 @@
         {% endif %}
         the current 24-hour period.</p>
 
-        The five largest quakes were:
-        <ul>
-            {% for quake in large_quakes %}
-            <li>{{ quake.properties.place }}, ({{ quake.properties.mag }})</li>
-            {% endfor %}
-        </ul>  
+    <p>The five largest quakes were:</p>p>
+    <ul>
+        {% for quake in large_quakes %}
+        <li>{{ quake.properties.place }} ({{ quake.properties.mag }})</li>
+        {% endfor %}
+    </ul>  
 </body>

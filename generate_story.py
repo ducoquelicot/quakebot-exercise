@@ -35,7 +35,7 @@ def main():
     write_story(compiled_text)
 
 def story_template():
-    with open(os.path.expanduser('~/Desktop/quakebot-exercise/quakebot-exercise/story_template.html')) as f:
+    with open('story_template.html') as f:
         return f.read()
 
 def sort_quakes(earthquakes):
@@ -46,7 +46,7 @@ def sort_quakes(earthquakes):
     )
 
 def usgs_data():
-    with open(os.path.expanduser('~/Desktop/quakebot-exercise/quakebot-exercise/usgs_all_day.geojson')) as f:
+    with open('usgs_all_day.geojson') as f:
         return json.load(f)['features']
 
 def write_story(text):
