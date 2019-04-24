@@ -35,7 +35,7 @@ def main():
     write_story(compiled_text)
 
 def story_template():
-    with open('story_template.html') as f:
+    with open(os.path.expanduser('~/Desktop/quakebot-exercise/quakebot-exercise/story_template.html')) as f:
         return f.read()
 
 def sort_quakes(earthquakes):

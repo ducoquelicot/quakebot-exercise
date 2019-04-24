@@ -5,8 +5,8 @@
 </head>
 <body>
     <h1>{{ title }}</h1>
-    <p>There were {{ num_quakes }} in the last 24 hours, including {{ large_quakes_count }} of magnitude 5.0 or greater.</p>
-    <p>The previous 24 hour period had {{ num_large_quakes_yesterday }} large earthquakes, 
+    <p>There were {{ num_quakes }} earthquakes in the last 24 hours, including {{ large_quakes_count }} of magnitude 5.0 or greater.</p>
+    <p>The previous 24-hour period had {{ num_large_quakes_yesterday }} large earthquakes, 
         {% if num_large_quakes_yesterday > large_quakes_count %}
         {{ num_large_quakes_yesterday - large_quakes_count }} more than
         {% elif num_large_quakes_yesterday < large_quakes_count %}
